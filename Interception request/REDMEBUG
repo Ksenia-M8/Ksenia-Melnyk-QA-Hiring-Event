@@ -1,1 +1,30 @@
+Bug Report: Incorrect Application Behavior on Receiving HTTP 400 Status Code
 
+Title: Application does not handle HTTP 400 status code correctly during login attempt with malformed JSON request.
+
+Steps to Reproduce:
+
+Open the web page https://demo.owasp-juice.shop/#/login in a mobile browser (either on an emulator or a real device).
+Attempt to log in by sending a POST request to the endpoint /rest/user/login with an empty or malformed JSON body using Charles Proxy or Fiddler for request interception.
+Observe the response received from the server.
+Expected Result:
+
+The application should handle the HTTP 400 status code gracefully and display an appropriate error message, indicating that the request body is malformed or empty.
+Actual Result:
+
+The application does not display any error message or feedback for the user. It either fails silently or shows no response, making it unclear to the user what went wrong.
+Frequency: 100% (Occurs every time a malformed or empty JSON body is sent)
+
+Impact:
+
+The lack of a proper error message or response handling for HTTP 400 status codes leads to confusion for the user. The user is unaware that the request failed due to an issue with the input, which affects the overall user experience.
+Priority: High
+
+Environment:
+
+Device: Emulator / Real Device (e.g., iPhone 12)
+Browser: Mobile Safari (iOS)
+Tools: Charles Proxy, Fiddler for request interception
+Additional Information:
+
+The server returns an HTTP 400 status code as expected for malformed or empty JSON bodies, but the application does not handle this case properly, leaving the user without clear feedback.
