@@ -1,1 +1,49 @@
+Bug Report 1: Subscription Cancellation Not Processed Correctly
 
+Title: Application fails to properly cancel subscription, keeping user in the system.
+
+Steps to Reproduce:
+
+Open the BetterMe app on an Android device.
+Navigate to the subscription settings.
+Initiate the cancellation of the subscription.
+Wait for the system confirmation of cancellation.
+Check if the subscription is canceled within the Google Play Store.
+Expected Result:
+
+The subscription should be canceled successfully, and the user should receive a confirmation message from the app and see the cancellation reflected in the Google Play Store subscription list.
+Actual Result:
+Despite initiating the cancellation, the app continues to charge the user, or shows that the subscription is still active in the app and in Google Play Store.
+
+
+Environment:
+
+Device: PIXEL 2 (Android 9)
+Google Play Store
+
+
+Bug Report 1: Incorrect Handling of Subscription Purchase Process
+
+Title: Application fails to correctly process subscription purchase on Android.
+
+Steps to Reproduce:
+
+Open the BetterMe mobile app on an Android device.
+Navigate to the subscription section and choose a plan to purchase.
+Complete the payment through the in-app purchase system (Google Play Store).
+Observe the response after completing the purchase.
+Expected Result:
+
+The user should immediately gain access to the subscription and the app should reflect the purchased plan, with an appropriate confirmation message.
+Actual Result:
+
+The app either fails to acknowledge the purchase, or displays a “payment pending” message indefinitely. In some cases, the user is unable to access subscription features despite a successful transaction.
+
+
+
+Priority: Critical
+
+Environment:
+
+Device: PIXEL 2 (Android 9)
+Google Play Store
